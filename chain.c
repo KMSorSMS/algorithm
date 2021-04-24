@@ -90,6 +90,17 @@ printf("\n--------------\nthis is what you put2:\n");
     scanf("%d",&add);
     copy = head;
     p = (struct chain *)malloc(sizeof(struct chain));
+    if(add<=head->data)
+    {
+        p->data = add;
+        p->next = head;
+        head = p;
+        n++;
+    }
+
+else
+{
+
     for(int i = 1;i<=n;i++){
         if(copy->next->data >= add){
             //struct chain *p = (struct chain *)malloc(sizeof(struct chain));      //这样做有危险，因为是局部变量，要不是地址的特性比较特殊外界是找不到的
@@ -102,6 +113,8 @@ printf("\n--------------\nthis is what you put2:\n");
         }
         copy = copy->next;
     }
+}
+
     copy = head;
     printf("--------------\nthis is what you put:\n");
     for(int i = 1;i<=n;i++){
