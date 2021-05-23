@@ -1,11 +1,11 @@
 {
     "version": "2.0.0",
-    "command": "g++",
+    "command": "gcc",
     "args": [
         "-g",
         "${file}",
         "-o",
-        "${workspaceFolder}/exe/${fileBasenameNoExtension}.exe"
+        "${workspaceFolder}\\exe_main\\${fileBasenameNoExtension}.exe"
     ], // 编译命令参数
     "problemMatcher": {
         "owner": "cpp",
@@ -21,5 +21,26 @@
             "severity": 4,
             "message": 5
         }
-    }
+    },
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc.exe 生成活动文件",
+            "command": "D:\\document_root\\mingw64\\bin\\gcc.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\exe_main\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "编译器: D:\\document_root\\mingw64\\bin\\gcc.exe"
+        }
+    ]
 }

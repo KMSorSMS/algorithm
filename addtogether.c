@@ -120,8 +120,7 @@ else if(l2!=NULL&&l1==NULL)
         r->next = NULL;
     }
 }
-free(r);
-free(p);
+
 
 return q;
 }
