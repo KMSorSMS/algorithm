@@ -30,6 +30,7 @@ printf("going 1\n");
 dfs(1);
 printf("going 2\n");
 //printf("a is %d\n",a[2]);
+  getchar();getchar();
 return 0;
 }
 
@@ -57,5 +58,6 @@ void dfs(int step)//step表示所处的位置
             book[i] = 0;//开始回收牌，倒着来
         }
     }
+  
 return;
 }
