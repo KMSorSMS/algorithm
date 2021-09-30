@@ -1,9 +1,9 @@
 // // # include <stdio.h>
 // // int main()
 // // {
-// //             // char str[10];  //str是string的缩冄1�7, 即字符串
+// //             // char str[10];  //str是string的缩冄1�7, 即字符串
 // //             // printf("input your:\n");
-// //             // scanf("%s", str);  /*输入参数是已经定义好的��字符数组名 1�7, 不用劄1�7&, 因为在C语言中数组名就代表该数组的起始地坢�*/
+// //             // scanf("%s", str);  /*输入参数是已经定义好的��字符数组名 1�7, 不用劄1�7&, 因为在C语言中数组名就代表该数组的起始地坢�*/
 // //             // printf("value is:%s\n", str);
 // //             // return 0;
 // //                         // char ch = '129';
@@ -216,20 +216,34 @@
 // }
 // // @lc code=end
 
-#include<stdio.h>
-int lenth(char *s)
-{
-    int l = 0;
-    while(s[++l]!='\0');
-    //����indexΪ2Ϊ\0��l��2ʱ���˳�
-    return l;
-}
+// #include<stdio.h>
+// int lenth(char *s)
+// {
+//     int l = 0;
+//     while(s[++l]!='\0');
+//     //����indexΪ2Ϊ\0��l��2ʱ���˳�
+//     return l;
+// }
+#include <stdlib.h>
+#include <stdio.h>
+#include <time.h>           //使用当前时钟做种子
+ 
 
+    // char a[2] = "";
+    // int b = lenth(a);
+    // printf("%d\n",b);
+    // printf("---%c---\n",a[0]);
+    // return 0;
+
+    
 int main()
 {
-    char a[2] = "";
-    int b = lenth(a);
-    printf("%d\n",b);
-    printf("---%c---\n",a[0]);
+    
+  int i;
+  srand( (unsigned)time( NULL ) );          //初始化随机数
+     for( i = 0; i < 10;i++ )                          //打印出10个随机数
+    {
+          printf( " %d\n", rand()%49+1 );
+    }
     return 0;
 }
